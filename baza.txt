@@ -1,0 +1,1 @@
+Pierwsza wersja spełniała tylko 1 normalizacje
