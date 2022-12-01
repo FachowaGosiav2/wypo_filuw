@@ -8,8 +8,13 @@
     ?>
 <body>
     Witam na stronie głównej nie obiecuj <br>że będzie ładnie
+    
     <?php
-    print_r($_SESSION['id']);
+    echo'
+    <form action="sites/movie-search.php">
+    <button type="submit">Zerknij na możliwe filmy</button>
+    </form>
+    ';
     if(isset($_SESSION['id'])){
             echo'
         <form action="./sites/logout.php">

@@ -8,11 +8,24 @@
     ?>
 <body>
     <?php
-    if(isset($_SESSION['id']) and isset($_SESSION['name']))
     for ($i = 0; $i < count($y2); $i++){
         echo 'tytuł filmu: '.$y2[$i]['name'].'<br>';
         echo 'opis filmu: '.$y2[$i]['content'].'<br>';
+        if(isset($_SESSION['id'])){
+            echo '
+            <form action="">
+            <button type="submit">Wyporzycz</button>
+            </form>
+            ';
+        }
+        echo '
+        <form action="">
+        <button type="submit">Zerknij na szczegóły</button>
+        </form>
+        ';
     }
     ?>
+
+
 </body>
 </html>
