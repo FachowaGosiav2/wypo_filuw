@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
     <?php
-    $x = new mysqli('127.0.0.1', 'root', '', 'mydb');
+    include '/xampp_gra/htdocs/aa/includes/header.php';
+    include '/xampp_gra/htdocs/aa/includes/nav.php';
     $y = $x->query('SELECT `id`,`name`, `login`, `password` FROM `users`;');
     $y2 = $y->fetch_all(MYSQLI_ASSOC);
-    session_start();
     ?>
-</head>
 <body>
     <form method="POST">
             Login:
@@ -26,7 +22,7 @@
                         $x2 = 1;
                         $_SESSION['id'] = $y2[$i]['id'];
                         $_SESSION['name'] = $_POST['name'];
-                        header("Location: index.php");
+                        header("Location: /aa/index.php");
                         break;
                     }
                 }

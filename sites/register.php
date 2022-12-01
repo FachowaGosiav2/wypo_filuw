@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <?php
-    $x = new mysqli('127.0.0.1', 'root', '', 'mydb');
+    include '/xampp_gra/htdocs/aa/includes/header.php';
+    include '/xampp_gra/htdocs/aa/includes/nav.php';
     ?>
-</head>
 <body>
     <form method="POST">
         Imie:
@@ -23,7 +19,7 @@
     if(isset($_POST["name"]) and isset($_POST['login']) and isset($_POST["password"])){
         $y = "INSERT INTO `users`(`name`, `is_admin`, `login`, `password`) VALUES ('".$_POST["name"]."','0','".$_POST['login']."','".$_POST["password"]."');";
         $x->query($y);
-        header('Location: login.php');
+        header('Location: /sites/login.php');
     }
     $x->close();
     ?>

@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
     <?php
-    $x = new mysqli('127.0.0.1', 'root', '', 'mydb');
+    include '/xampp_gra/htdocs/aa/includes/header.php';
+    include '/xampp_gra/htdocs/aa/includes/nav.php';
     $y = $x->query('SELECT `name`, `content` FROM `films`');
     $y2 = $y->fetch_all(MYSQLI_ASSOC);
-    session_start();
     ?>
-</head>
 <body>
     <?php
     if(isset($_SESSION['id']) and isset($_SESSION['name']))
