@@ -3,7 +3,7 @@
     <?php
     include '/xampp_gra/htdocs/aa/includes/header.php';
     include '/xampp_gra/htdocs/aa/includes/nav.php';
-    $y = $x->query('SELECT `name`, `content` FROM `films`');
+    $y = $x->query('SELECT `id`, `name`, `content` FROM `films`');
     $y2 = $y->fetch_all(MYSQLI_ASSOC);
     ?>
 <body>
@@ -13,15 +13,12 @@
         echo 'opis filmu: '.$y2[$i]['content'].'<br>';
         if(isset($_SESSION['id'])){
             echo '
-            <form action="">
-            <button type="submit">Wyporzycz</button>
-            </form>
+            <a href="./add-movie.php?film2='.$y2[$i]['id'].'">wyporzycz</a><br>    
             ';
         }
         echo '
-        <form action="">
-        <button type="submit">Zerknij na szczegóły</button>
-        </form>
+        <a href="./movie-details.php?film='.$y2[$i]['id'].'">szczegułu</a>
+        <br>
         ';
     }
     ?>
