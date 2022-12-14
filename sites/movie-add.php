@@ -10,11 +10,25 @@
 </head>
 <body>
     <form method="post">
+    Tytuł <input type="text" name="title"><br>
+    Opis <input type="text" name="content"><br>
     <?php
     for($i = 0;$i<count($y2);$i++){
-        echo $y2[$i]['name'].'<input type="radio" name="type" value="'.$i.'"><br>';
+        $y3 = $i+1;
+        echo $y2[$i]['name'].'<input type="radio" name="type" value="'.$y3.'"><br>';
     }
     ?>
+    <button type="submit">Zatwierdz kategorię</button>
     </form>
+    <?php
+    if(isset($_POST['title']) and isset($_POST['content']) and isset($_POST['type'])){
+    try{
+    $z = $x->query('INSERT INTO `films`(`name`, `content`, `categories_id`) VALUES ("'.$_POST['title'].'", "'.$_POST['content'].'", "'.$_POST['type'].'")');
+    }
+    catch(Exception){
+        
+    }
+    }
+    ?>
 </body>
 </html>

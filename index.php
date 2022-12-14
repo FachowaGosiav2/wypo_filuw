@@ -20,6 +20,12 @@
         <form action="./sites/logout.php">
         <button type="submit">Wyloguj się</button>
         </form>
+        <form action="./sites/movie-my.php">
+        <button type="submit">Twoje filmy</button>
+        </form>
+        <form action="./sites/movie-add.php">
+        <button type="submit">Dodaj film</button>
+        </form>
         ';
     }
     else{
