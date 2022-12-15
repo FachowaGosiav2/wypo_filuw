@@ -16,7 +16,7 @@
         Nazwa filmu '.$y2[$i][1].'<br>
         Kategoria '.$y2[$i][2].'<br>
         <a href="./submit.php?user='.$y2[$i][4].'&film='.$y2[$i][5].'">zaakceptuje</a><br>
-        <a href="./movie-details?user='.$y2[$i][4].'&film='.$y2[$i][5].'">szczegóły</a><br>
+        <a href="./movie-details.php?user='.$y2[$i][4].'&film='.$y2[$i][5].'">szczegóły</a><br>
         ';
     }
     ?>

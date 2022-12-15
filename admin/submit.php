@@ -4,11 +4,7 @@
     <?php
     include '/xampp_gra/htdocs/aa/includes/header.php';
     include '/xampp_gra/htdocs/aa/includes/nav.php'; 
-    try{
     $y = $x->query('UPDATE `submit` SET `is_lend`="1" WHERE `users_id` = "'.$_GET['user'].'" AND `films_id` = "'.$_GET['film'].'"');
-    }
-    catch(Exception){
-    }
     ?>
 </head>
 <body>
