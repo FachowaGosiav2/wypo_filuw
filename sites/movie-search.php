@@ -13,7 +13,7 @@
         echo 'opis filmu: '.$y2[$i]['content'].'<br>';
         if(isset($_SESSION['id'])){
             echo '
-            <a href="./add-movie.php?film2='.$y2[$i]['id'].'">wyporzycz</a><br>    
+            <a href="./add-movie.php?film2='.$y2[$i]['id'].'&id='.$_SESSION['id'].'">wyporzycz</a><br>    
             ';
         }
         echo '

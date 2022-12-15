@@ -22,12 +22,7 @@
     </form>
     <?php
     if(isset($_POST['title']) and isset($_POST['content']) and isset($_POST['type'])){
-    try{
     $z = $x->query('INSERT INTO `films`(`name`, `content`, `categories_id`) VALUES ("'.$_POST['title'].'", "'.$_POST['content'].'", "'.$_POST['type'].'")');
-    }
-    catch(Exception){
-        
-    }
     }
     ?>
 </body>
