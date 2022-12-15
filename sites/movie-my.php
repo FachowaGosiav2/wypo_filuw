@@ -17,10 +17,10 @@
         Kategoria '.$y2[$i][3].'<br>
         ';
         if($y2[$i][4] == 1){
-            $za = 'zatwierdzone';
+            $za = 'zatwierdzone<br>';
         }
         else{
-            $za = 'nie zatwierdzone';
+            $za = 'nie zatwierdzone <br>';
         }
         echo $za;
     }

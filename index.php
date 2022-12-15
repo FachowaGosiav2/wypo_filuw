@@ -36,8 +36,17 @@
         <form action="./sites/login.php">
             <button type="submit">Zaloguj się</button>
         </form>
+        <a href="http://localhost/aa/admin/login.php"><img height="500" width="250" src="http://localhost/aa/102411317_p0.png"></a>
+        
         ';
     }
+    if(isset($_SESSION['id_admin'])){
+        echo'
+    <form action="./admin/movie-list.php">
+    <button type="submit">Dokładna lista</button>
+    </form>
+    ';
+}
     ?>
 </body>
 </html>
