@@ -45,6 +45,9 @@
     <form action="./admin/movie-list.php">
     <button type="submit">Dokładna lista</button>
     </form>
+    <form action="./admin/add-admin.php">
+    <button type="submit">Dodaj admina</button>
+    </form>
     ';
 }
     ?>
